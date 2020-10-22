@@ -44,6 +44,17 @@ public class Demo {
     }
     return newArray;
   }
+  public static int[][] create2DArrayRandomized(int rows,int cols,int MaxValue) {
+    int[][] newArray = new int[rows][];
+    for(int r = 0; r<rows; r++) {
+      int colLength = (int) (Math.random()*(cols+1));
+      newArray[r] = new int[colLength];
+      for(int c = 0; c<colLength; c++) {
+        newArray[r][c] = (int)(Math.random()*(MaxValue+1));
+      }
+    }
+    return newArray;
+  }
   public static void printLoop(int n){
   for(int i = 1; i<=n; i++){
     for(int j = 0; j<(n+1)-i; j++){
@@ -60,7 +71,11 @@ public class Demo {
       int a = Integer.parseInt(args[0]);
       printLoop(a);
     }
-  //int [][] test = create2DArray(6,2,6);
+  //int[][] test = create2DArray(5,4,4);
+  //int[][] randomizedTest = create2DArrayRandomized(4,10,100);
   //System.out.println(arrayDeeptoString(test));
+  //System.out.println(arrayDeeptoString(randomizedTest));
+  //int[] again = {3,4,5};
+  //System.out.println(arrtoString(again));
   }
 }
