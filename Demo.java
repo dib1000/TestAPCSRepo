@@ -5,11 +5,11 @@ public class Demo {
   }
   String array = "{";
   for(int i = 0; i<arr.length; i++) {
-    if(i==arr.length-1) {
-      array = array + " " + arr[i];
-    }
-    else if(i==0) {
+    if(i==0) {
       array = array + arr[i] + ",";
+    }
+    else if(i==arr.length-1) {
+      array = array + " " + arr[i];
     }
     else {
       array = array + " " + arr[i] +",";
@@ -35,6 +35,15 @@ public class Demo {
   }
   return array + "}";
   }
+  public static int[][] create2DArray(int rows,int cols,int MaxValue) {
+    int[][] newArray = new int[rows][cols];
+    for(int r = 0; r<rows; r++) {
+      for(int c = 0; c<cols; c++) {
+        newArray[r][c] = (int)(Math.random()*(MaxValue+1));
+      }
+    }
+    return newArray;
+  }
   public static void printLoop(int n){
   for(int i = 1; i<=n; i++){
     for(int j = 0; j<(n+1)-i; j++){
@@ -51,7 +60,7 @@ public class Demo {
       int a = Integer.parseInt(args[0]);
       printLoop(a);
     }
-  //int [][] test = {{2, 0}};
+  //int [][] test = create2DArray(6,2,6);
   //System.out.println(arrayDeeptoString(test));
   }
 }
