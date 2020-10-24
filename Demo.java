@@ -17,7 +17,7 @@ public class Demo {
   }
   return array + "}";
   }
-  public static String arrayDeeptoString(int[][] arr) {
+  public static String arrayDeepToString(int[][] arr) {
     if (arr.length == 1) {
     return "{"+arrtoString(arr[0])+"}";
   }
@@ -73,8 +73,8 @@ public class Demo {
     }
   //int[][] test = create2DArray(5,4,4);
   //int[][] randomizedTest = create2DArrayRandomized(4,10,100);
-  //System.out.println(arrayDeeptoString(test));
-  //System.out.println(arrayDeeptoString(randomizedTest));
+  //System.out.println(arrayDeepToString(test));
+  //System.out.println(arrayDeepToString(randomizedTest));
   //int[] again = {3,4,5};
   //System.out.println(arrtoString(again));
   }
